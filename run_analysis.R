@@ -59,6 +59,7 @@ foo
 ## with the average of each variable for each activity and each subject.
 foo2 <- foo[, lapply(.SD, mean), by = .(activity_name, subject)]
 
+## SAVING THE TIDY DATA:
 fwrite(foo2, file = "./final_project/getting_cleaning_data/tidy_data.txt", 
        row.names = F)
 
